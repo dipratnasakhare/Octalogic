@@ -2,10 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
+@layer base {
   :root {
-    --text-color: #374150;
-    --font-sans: "Inter", sans-serif;
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
 
@@ -80,4 +78,4 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-} */
+}
