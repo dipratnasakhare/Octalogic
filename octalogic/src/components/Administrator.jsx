@@ -3,9 +3,7 @@ import React from "react";
 export const Administrator = () => {
   return (
     <div className="m-16 border-2 ">
-      {/* width: Fill (1,200px)
-height: Hug (259px)
-gap: 16px */}
+
 
       <div>
         <h1 className="text-left text-center text-center text-6xl font-Nunito-Sans ">
