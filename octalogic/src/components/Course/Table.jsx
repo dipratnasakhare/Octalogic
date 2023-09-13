@@ -160,7 +160,7 @@ export function DataTableDemo({ data }) {
 
   return (
     <div className="w-full">
-      <div className="flex justify-between my-2 ">
+      <div className="flex justify-between my-2">
         <div className="grid gap-4">
           <h2 className="text-gray-500 text-base font-bold leading-5 text-left">
             COURSE LIST

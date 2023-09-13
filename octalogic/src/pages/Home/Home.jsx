@@ -1,14 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../icons/logo.png";
 import home from "../../icons/Home.png";
 import cource from "../../icons/Cource.png";
 import logout from "../../icons/Logout.png";
 import { Course } from "../../components/Course/Course";
 import { useNavigate } from "react-router-dom";
+import { Overview } from "../../components/Overview/Overview";
 
 export const Home = () => {
 
   const navigate = useNavigate()
+  const [Bool, setBool] = useState(true)
+
 
   const HandelLogout = () =>{
     localStorage.setItem("octaMyUser", "")
@@ -31,8 +34,8 @@ useEffect(() => {
         </div>
 
         <div className="w-16 h-32  grid gap-x-1">
-          <img className="w-16 h-14 py-1 rounded-md" src={home} alt="" />
-          <img className="w-16 h-14 py-1 rounded-md" src={cource} alt="" />
+          <img onClick={()=>setBool(true)} className="w-16 h-14 py-1 rounded-md" src={home} alt="" />
+          <img onClick={()=>setBool(false)} className="w-16 h-14 py-1 rounded-md" src={cource} alt="" />
         </div>
 
         <div className="absolute bottom-5 left-0 m-auto w-6/12 p-3">
@@ -41,7 +44,7 @@ useEffect(() => {
       </div>
 
       <div  className="border-red-1 w-full ">
-        <Course />
+      {Bool ? <Overview /> : <Course />}
       </div>
     </div>
   );
